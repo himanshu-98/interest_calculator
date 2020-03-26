@@ -1,0 +1,40 @@
+<html>
+<script type="text/javascript">
+function a() {
+var p=document.getElementById("p").value;
+var r=document.getElementById("r").value;
+var t=document.getElementById('t').value;
+var total=(p*r*t)/100;
+document.getElementById('pp').innerHTML=total;
+}
+function ci() {
+var p=document.getElementById("p_c").value;
+var r=document.getElementById("r_c").value;
+var t=document.getElementById("t_c").value;
+var n=document.getElementById("n_c").value;
+var total=p*Math.pow((1+(r/n)),(n*t));
+document.getElementById("ci").innerHTML=total;
+}
+</script>
+<head><h1><center>Interest Calculator</center></h1></head>
+<body style="background-color:red">
+<center>
+<div style="background-color:green;margin-top:10%">
+Simple Interest
+<table>
+<tr><th>Principal</th><th>Rate(%)</th><th>Time(years)</th></tr>
+<tr><th><input type="text" id="p"></th><th><input type="text" id="r"></th><th><input type="text" id="t"><button onclick="a()">calculate</button></th></tr>
+</table>    
+<p id="pp">  0  </p>
+</div>
+<div style="background-color:green;margin-top:10%">
+Compound Interest
+<table>
+<tr><th>Principal</th><th>Rate(%)</th><th>Time(years)</th><th>number of times interest applied per time period</th></tr>
+<tr><th><input type="text" id='p_c'></th><th><input type="text" id="r_c"></th><th><input type="text" id="t_c"></th><th><input type="text" id="n_c"><button onclick="ci()">Calculate</button></th></tr>
+</table>
+<p id="ci">  0  </p>
+</div>
+</center>
+</body>
+</html>
