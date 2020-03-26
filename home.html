@@ -12,8 +12,13 @@ var p=document.getElementById("p_c").value;
 var r=document.getElementById("r_c").value;
 var t=document.getElementById("t_c").value;
 var n=document.getElementById("n_c").value;
-var total=p*Math.pow((1+(r/n)),(n*t));
-document.getElementById("ci").innerHTML=total;
+            var r1=r/100;
+            var nbr=r1/n;
+            var x=(1+nbr);
+            var nt=n*t;
+            var xnt=Math.pow(x,nt);
+            var cmpndint=p*xnt;
+document.getElementById("ci").innerHTML=cmpndint;
 }
 </script>
 <head><h1><center>Interest Calculator</center></h1></head>
